@@ -22,10 +22,8 @@
     <link rel="stylesheet" href="assets/css/vander/flaticon.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Banting University</title>
+    <title>Srinath Group</title>
 </head>
-
-
 
 <body>
     <!-- Navbar Section -->
@@ -35,7 +33,7 @@
                 <!-- Main Nav Start -->
                 <div class="main-nav">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index-2.html">
+                        <a class="navbar-brand" href="index.php">
                             <img src="assets/img/logos/logo_1.png" alt="Nav Logo">
                         </a>
 
@@ -114,13 +112,13 @@
                             <ul class="navbar-nav">
                                 <!-- Use "menu-item-has-no-child" class if there is no sub-menu -->
                                 <li class="menu-item-has-no-children">
-                                    <a href="about.html">Home</a>
+                                    <a href="index.php">Home</a>
                                 </li>
 
                                 <li class="menu-item-has-children">
                                     <a href="#">Our Company</a>
                                     <ul class="sub-menu">
-                                        <li><a href="index-2.html" class="current-menu-item">About us</a></li>
+                                        <li><a href="about.php" class="current-menu-item">About us</a></li>
 
                                         <li class="sub-menu-item-has-children"><a href="#">Leadership</a>
                                             <ul class="sub-menu">
@@ -168,13 +166,13 @@
                 </div>
 
                 <!-- Side Nav Start -->
-                <div class="side-nav d-flex align-items-center">
+                <!-- <div class="side-nav d-flex align-items-center">
                     <a class="" href="sign-in.html">Sign In</a>
 
                     <div class="search search-active">
                         <i class="flaticon-search"></i>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- search start -->

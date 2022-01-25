@@ -1,114 +1,10 @@
-<?php include "./include/header.php"?>
-
-
-    <!-- Navbar for mobile screen -->
-    <div class="navbar-mobile sticky-bar d-block d-sm-none">
-        <div class="container-fluid">
-            <div class="menu-toggler">
-                <div class="hamburger-menu">
-                    <a href="#">
-                        <span>Menu</span>
-                    </a>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div class="logo">
-                <a href="#"><img src="assets/img/logos/logo_1.png" alt="logo" class="img-fluid"></a>
-            </div>
-            <div class="divider"></div>
-            <div class="language">
-                <div class="dropdown">
-                    <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <img class="flag" src="assets/img/icons/Flags/united-kingdom.png" alt="cuntry flag" />
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/france.png"
-                                alt="flag image" class="flag" /></button>
-                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/germany.png"
-                                alt="flag image" class="flag" /></button>
-                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/japan.png"
-                                alt="flag image" class="flag" /></button>
-                    </div>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div class="search">
-                <i class="flaticon-search"></i>
-            </div>
-        </div>
-
-        <div class="nav-menu-items">
-            <ul class="nav-items">
-                <li><a href="sign-in.html">Login/Sign up</a></li>
-                <li class="menu-item-has-children"><a href="index-2.html">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="index-2.html">Homepage 1</a></li>
-                        <li><a href="index-3.html">Homepage 2</a></li>
-                        <li><a href="index-4.html">Homepage 3</a></li>
-                        <li><a href="index-5.html">Homepage 4</a></li>
-                        <li><a href="index-6.html">Homepage 5</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html" class="current-menu-item">About</a></li>
-                <li class="menu-item-has-children"><a href="#">Courses</a>
-                    <ul class="sub-menu">
-                        <li><a href="courses.html">Courses Style 1</a></li>
-                        <li><a href="all-courses.html">Courses Style 2</a></li>
-                        <li><a href="course-detail.html">Course Detail</a></li>
-                        <li><a href="enrollment.html">Enrollment</a></li>
-                        <li><a href="join.html">Join Us</a></li>
-                        <li><a href="teacher.html">Single Instructor</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children"><a href="#">Blog</a>
-                    <ul class="sub-menu">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-detail.html">Blog Detail</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children"><a href="#">Events</a>
-                    <ul class="sub-menu">
-                        <li><a href="event.html">Events</a></li>
-                        <li><a href="event-detail.html">Event Detail</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children"><a href="#">Pages</a>
-                    <ul class="sub-menu">
-                        <li><a href="404.html">404</a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                        <li><a href="coming-soon.html">Coming soon</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-no-child"><a href="contact.html">Contact</a></li>
-                <li class="menu-item-has-children">
-                  <a href="#">UI Elements</a>
-                  <ul class="sub-menu">
-                      <li><a href="Typography-UI.html">Typography</a></li>
-                      <li><a href="accordions.html">Accordion</a></li>
-                      <li><a href="Button-UI.html">Button</a></li>
-                      <li><a href="Icons.html">Icons</a></li>
-                      <li><a href="Tables-UI.html">Tables</a></li>
-                      <li><a href="Forms-UI.html">Forms</a></li>
-                      <li><a href="Alerts%26Cookies-UI.html">Alerts & Cookies</a>
-                      <li><a href="Model-UI.html">Model</a></li>
-                      <li><a href="Pagination-UI.html">Pagination</a></li>
-                      <li><a href="breadcrub.html">Breadcrumb</a></li>
-                      <li><a href="Footer-UI.html">Footer</a></li>
-                      <li><a href="Countdowns%26Menus-UI.html">Countdowns & Menus</a></li>
-                      <li><a href="Card-UI.html">Card</a></li>
-                      <li><a href="Popover%26Lists-UI.html">Popover&List</a></li>
-                  </ul>
-              </li>
-            </ul>
-        </div>
-
-        <div class="mobile-search-wrapper">
-            <form>
-                <input type="text" placeholder="Type something to start">
-            </form>
-        </div>
-    </div>
+<?php 
+include "./include/header.php";
+include "./config.php";
+$query = "SELECT * FROM `jag_about_us`";
+$result = mysqli_query($connection , $query);
+?>
+   
 
   <!-- Breadcrumb -->
   <div class="breadcrub-style-1 section">
@@ -136,31 +32,7 @@
       <i class="fas fa-envelope icon" id="open-form-popup"></i>
     </div>
     <!-- mantra -->
-    <div class="mantra section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-8 content">
-            <h2>We help people of all nationality realise their dream.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus imperdiet metus at congue.
-              Praesent cursus a ante ut facilisis. Morbi iaculis dolor purus, auctor porta dolor gravida ac. Mauris ac
-              tristique nulla. In hac habitasse platea dictumst. In ultrices pulvinar imperdiet. Vivamus ut dui urna.
-              Aenean lacinia ut nisi vel dapibus. Donec id elit vehicula velit vulputate dignissim.</p>
-          </div>
-          <div class="col-12 col-lg-4 media">
-            <!-- Media BG Goes Here -->
-            <img class="img-fluid" src="assets/img/University/About-us-1/video_bg.png"
-              alt="martra media" />
-
-            <!-- video popup toggler -->
-            <button id="open-video-popup" class="d-flex justify-content-center align-items-center halfway-btn">
-                <i class="flaticon-play-button"></i>
-              </button>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
+  
 
     <!-- video popup -->
     <div class="video-popup">
@@ -196,32 +68,11 @@
         </div>
       </div>
     <!-- Mission -->
-    <div class="mission-section section">
-      <div class="container text-center">
-        <h2 class="margin-bottom-50">Our mission</h2>
-        <div class="content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus imperdiet metus at congue.
-            Praesent
-            cursus a ante ut facilisis. Morbi iaculis dolor purus, auctor porta dolor gravida ac. Mauris ac tristique
-            nulla. In hac habitasse platea dictumst. In ultrices pulvinar imperdiet. Vivamus ut dui urna. Aenean lacinia
-            ut nisi vel dapibus. Donec id elit vehicula velit vulputate dignissim. Pellentesque erat ipsum, malesuada et
-            arcu quis,</p>
-          <p>condimentum lacinia tortor. Integer quis justo eget libero sollicitudin ultrices. Nulla sit amet nisl vel
-            sem
-            accumsan tempor non egestas lectus. Vivamus bibendum mollis ipsum, sit amet viverra dui condimentum nec.
-            Curabitur vestibulum imperdiet molestie. Curabitur bibendum commodo mi et auctor. Pellentesque laoreet
-            elementum ligula, ac ornare augue dignissim nec. Phasellus finibus, nunc cursus vestibulum condimentum,
-            libero
-            risus pharetra orci, eu luctus orci eros ac lorem. In id venenatis arcu. Morbi a lacus non risus hendrerit
-            facilisis.</p>
-        </div>
-      </div>
-    </div>
-
+  
     <!-- Values -->
     <div class="values-section section">
       <div class="container">
-        <h2 class="text-center margin-bottom-50">Our values</h2>
+        <h2 class="text-center margin-bottom-50">About us</h2>
         <div class="top-content">
           <div class="row">
             <div class="col-12 col-lg-6 media">
@@ -240,60 +91,16 @@
             </div>
           </div>
         </div>
-        <div class="bottom-content">
-          <div class="row">
-            <div class="col-12 col-lg-6 content">
-              <h2 class="margin-bottom-50">Our values are what make us stand out</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus imperdiet metus at congue.
-                Praesent cursus a ante ut facilisis. Morbi iaculis dolor purus, auctor porta dolor gravida ac.</p>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="progress-bars">
-                <div class="single-progress-item">
-                  <div class="item-1">
-                    <p class="title">Lorem ipsum dolor sit amet.</p>
-                    <div class="pro-bar htmlprogress-1"></div>
-                  </div>
-                  <div class="item-2">
-                    <p class="title">Lorem ipsum dolor sit amet.</p>
-                    <div class="pro-bar htmlprogress-2"></div>
-                  </div>
-                  <div class="item-3">
-                    <p class="title">Lorem ipsum dolor sit amet.</p>
-                    <div class="pro-bar htmlprogress-3"></div>
-                  </div>
-                  <div class="item-4">
-                    <p class="title">Lorem ipsum dolor sit amet.</p>
-                    <div class="pro-bar htmlprogress-4"></div>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
     <!-- Vision -->
     <div class="vision-section section">
       <div class="container text-center">
-        <h2 class="margin-bottom-50">Our vision</h2>
+        <!-- <h2 class="margin-bottom-50">Our vision</h2> -->
         <div class="content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus imperdiet metus at congue.
-            Praesent
-            cursus a ante ut facilisis. Morbi iaculis dolor purus, auctor porta dolor gravida ac. Mauris ac tristique
-            nulla. In hac habitasse platea dictumst. In ultrices pulvinar imperdiet. Vivamus ut dui urna. Aenean lacinia
-            ut nisi vel dapibus. Donec id elit vehicula velit vulputate dignissim. Pellentesque erat ipsum, malesuada et
-            arcu quis,</p>
-          <p>condimentum lacinia tortor. Integer quis justo eget libero sollicitudin ultrices. Nulla sit amet nisl vel
-            sem
-            accumsan tempor non egestas lectus. Vivamus bibendum mollis ipsum, sit amet viverra dui condimentum nec.
-            Curabitur vestibulum imperdiet molestie. Curabitur bibendum commodo mi et auctor. Pellentesque laoreet
-            elementum ligula, ac ornare augue dignissim nec. Phasellus finibus, nunc cursus vestibulum condimentum,
-            libero
-            risus pharetra orci, eu luctus orci eros ac lorem. In id venenatis arcu. Morbi a lacus non risus hendrerit
-            facilisis.</p>
+         
+         
         </div>
       </div>
     </div>
@@ -381,7 +188,7 @@
   <!-- Teachers Section -->
   <div class="teachers-section section">
     <div class="container">
-      <h2 class="text-center margin-bottom-50">Our teachers</h2>
+      <h2 class="text-center margin-bottom-50">Our Team</h2>
       <p class="margin-bottom-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet
         consectetur adipisicing
         elit. Dolorem, rem! Nobis rerum aliquam vel. Earum porro culpa quis omnis nostrum ipsum necessitatibus?</p>
@@ -563,19 +370,5 @@
   </div>
 
   <!-- Become an instructor -->
-  <div class="opportunity-section section">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-12 col-md-9 content">
-          <h2 class="margin-bottom-20">Whould like to become a instructor?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit odio. Morbi sodales nisi nec tortor
-            commodo, malesuada fermentum magna faucibus. Proin fringilla ante lacus, eu condimentum est rutrum eget.
-            Vestibulum molestie at sapien sed facilisis.</p>
-        </div>
-        <div class="col-12 col-md-3 d-flex justify-content-md-center btn">
-          <div class="main-btn">Get Started</div>
-        </div>
-      </div>
-    </div>
-  </div>
+
 <?php include "./include/footer.php"?>
